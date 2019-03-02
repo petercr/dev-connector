@@ -4,10 +4,11 @@
   "description": "A MERN stack social media app",
   "main": "server.js",
   "scripts": {
-    "client-install": "npm install --prefix client",
+    "client-install": "cd client && npm install ",
+    "install-all": "npm install && cd client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
+    "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
