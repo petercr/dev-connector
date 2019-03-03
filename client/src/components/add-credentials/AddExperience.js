@@ -9,14 +9,13 @@ import { addExperience } from "../../actions/profileActions";
 class AddExperience extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       company: "",
       title: "",
       location: "",
       from: "",
       to: "",
-      current: "",
+      current: false,
       description: "",
       errors: {},
       disabled: false
@@ -73,12 +72,12 @@ class AddExperience extends Component {
               </Link>
               <h1 className="display-4 text-center">Add Experience</h1>
               <p className="lead text-center">
-                Add any job position that you have had in the past or current
+                Add any job or position that you have had in the past or current
               </p>
-              <small className="d-block pb-3">* = Required Fields</small>
+              <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="Company"
+                  placeholder="* Company"
                   name="company"
                   value={this.state.company}
                   onChange={this.onChange}
@@ -125,7 +124,7 @@ class AddExperience extends Component {
                     onChange={this.onCheck}
                     id="current"
                   />
-                  <label htmlFor="current" className="from-check-label">
+                  <label htmlFor="current" className="form-check-label">
                     Current Job
                   </label>
                 </div>
@@ -135,7 +134,7 @@ class AddExperience extends Component {
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Tell us about the position"
+                  info="Tell us about the the position"
                 />
                 <input
                   type="submit"
