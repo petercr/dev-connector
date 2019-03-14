@@ -20,7 +20,7 @@ class CreateProfile extends Component {
       location: "",
       status: "",
       skills: "",
-      githubUsername: "",
+      githubusername: "",
       bio: "",
       twitter: "",
       facebook: "",
@@ -50,7 +50,7 @@ class CreateProfile extends Component {
       location: this.state.location,
       status: this.state.status,
       skills: this.state.skills,
-      githubUsername: this.state.githubUsername,
+      githubusername: this.state.githubusername,
       bio: this.state.bio,
       twitter: this.state.twitter,
       facebook: this.state.facebook,
@@ -193,10 +193,10 @@ class CreateProfile extends Component {
                 />
                 <TextFieldGroup
                   placeholder="GitHub Username"
-                  name="githubUsername"
-                  value={this.state.githubUsername}
+                  name="githubusername"
+                  value={this.state.githubusername}
                   onChange={this.onChange}
-                  error={errors.githubUsername}
+                  error={errors.githubusername}
                   info="If you want your latest repos and a Github link, include your username"
                 />
                 <TextAreaFieldGroup
@@ -216,18 +216,13 @@ class CreateProfile extends Component {
                         displaySocialInputs: !prevState.displaySocialInputs
                       }));
                     }}
-                    className="btn btn-light"
-                  >
+                    className="btn btn-light">
                     Add Social Network Links
                   </button>
                   <span className="text-muted">Optional</span>
                 </div>
                 {socialInputs}
-                <input
-                  type="submit"
-                  value="Submit"
-                  className="btn btn-info btn-block mt-4"
-                />
+                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
           </div>

@@ -21,7 +21,7 @@ class CreateProfile extends Component {
       location: "",
       status: "",
       skills: "",
-      githubUsername: "",
+      githubusername: "",
       bio: "",
       twitter: "",
       facebook: "",
@@ -55,26 +55,14 @@ class CreateProfile extends Component {
       profile.company = !isEmpty(profile.company) ? profile.company : "";
       profile.website = !isEmpty(profile.website) ? profile.website : "";
       profile.location = !isEmpty(profile.location) ? profile.location : "";
-      profile.githubUsername = !isEmpty(profile.githubUsername)
-        ? profile.githubUsername
-        : "";
+      profile.githubusername = !isEmpty(profile.githubusername) ? profile.githubusername : "";
       profile.bio = !isEmpty(profile.bio) ? profile.bio : "";
       profile.social = !isEmpty(profile.social) ? profile.social : {};
-      profile.twitter = !isEmpty(profile.social.twitter)
-        ? profile.social.twitter
-        : "";
-      profile.facebook = !isEmpty(profile.social.facebook)
-        ? profile.social.facebook
-        : "";
-      profile.linkedin = !isEmpty(profile.social.linkedin)
-        ? profile.social.linkedin
-        : "";
-      profile.youtube = !isEmpty(profile.social.youtube)
-        ? profile.social.youtube
-        : "";
-      profile.instagram = !isEmpty(profile.social.instagram)
-        ? profile.social.instagram
-        : "";
+      profile.twitter = !isEmpty(profile.social.twitter) ? profile.social.twitter : "";
+      profile.facebook = !isEmpty(profile.social.facebook) ? profile.social.facebook : "";
+      profile.linkedin = !isEmpty(profile.social.linkedin) ? profile.social.linkedin : "";
+      profile.youtube = !isEmpty(profile.social.youtube) ? profile.social.youtube : "";
+      profile.instagram = !isEmpty(profile.social.instagram) ? profile.social.instagram : "";
 
       // Set components field state
       this.setState({
@@ -84,7 +72,7 @@ class CreateProfile extends Component {
         location: profile.location,
         status: profile.status,
         skills: skillsCSV,
-        githubUsername: profile.githubUsername,
+        githubusername: profile.githubusername,
         bio: profile.bio,
         twitter: profile.twitter,
         facebook: profile.facebook,
@@ -105,7 +93,7 @@ class CreateProfile extends Component {
       location: this.state.location,
       status: this.state.status,
       skills: this.state.skills,
-      githubUsername: this.state.githubUsername,
+      githubusername: this.state.githubusername,
       bio: this.state.bio,
       twitter: this.state.twitter,
       facebook: this.state.facebook,
@@ -248,10 +236,10 @@ class CreateProfile extends Component {
                 />
                 <TextFieldGroup
                   placeholder="GitHub Username"
-                  name="githubUsername"
-                  value={this.state.githubUsername}
+                  name="githubusername"
+                  value={this.state.githubusername}
                   onChange={this.onChange}
-                  error={errors.githubUsername}
+                  error={errors.githubusername}
                   info="If you want your latest repos and a Github link, include your username"
                 />
                 <TextAreaFieldGroup
@@ -271,18 +259,13 @@ class CreateProfile extends Component {
                         displaySocialInputs: !prevState.displaySocialInputs
                       }));
                     }}
-                    className="btn btn-light"
-                  >
+                    className="btn btn-light">
                     Add Social Network Links
                   </button>
                   <span className="text-muted">Optional</span>
                 </div>
                 {socialInputs}
-                <input
-                  type="submit"
-                  value="Submit"
-                  className="btn btn-info btn-block mt-4"
-                />
+                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
           </div>
