@@ -1,8 +1,7 @@
 # VS Code Local Settings
 .vscode/
 
-# Keys.js dev file
-/config/keys_dev.js
+
 
 # Logs
 logs
