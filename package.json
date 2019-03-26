@@ -28,6 +28,9 @@
     "url": "https://github.com/petercr/dev-connector/issues"
   },
   "homepage": "https://github.com/petercr/dev-connector#readme",
+  "engines": {
+    "node": "11.x"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
