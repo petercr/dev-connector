@@ -9,6 +9,9 @@ const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 
 const app = express();
+const port = process.env.PORT || 5000;
+
+const PROD = true;
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -35,7 +38,7 @@ app.use("/api/posts", posts);
 app.use("/api/profile", profile);
 
 // Server static assets if in production
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || PROD) {
   // Set static folder
   app.use(express.static("client/build"));
 
@@ -44,7 +47,5 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
-
-const port = process.env.$PORT || 5000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
