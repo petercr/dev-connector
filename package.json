@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/petercr/dev-connector#readme",
   "engines": {
-    "node": "11.x"
+    "node": "10.*"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
