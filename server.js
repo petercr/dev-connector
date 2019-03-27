@@ -32,7 +32,7 @@ require("./config/passport")(passport);
 // Server static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
-  app.use(express.static("client/build"));
+  app.use(express.static(path.join(__dirname, "client/build")));
 
   // Change path to client/build
   app.get("*", (req, res) => {
