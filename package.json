@@ -6,6 +6,7 @@
   "scripts": {
     "client-install": "npm install --prefix client ",
     "install-all": "npm install && npm install --prefix client",
+    "postinstall": "npm install --prefix client --save",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm start ",
