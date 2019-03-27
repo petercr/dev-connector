@@ -29,11 +29,6 @@ app.use(passport.initialize());
 // Passport Config
 require("./config/passport")(passport);
 
-// Use routes
-app.use("/api/users", users);
-app.use("/api/posts", posts);
-app.use("/api/profile", profile);
-
 // Server static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
@@ -44,6 +39,11 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
+
+// Use routes
+app.use("/api/users", users);
+app.use("/api/posts", posts);
+app.use("/api/profile", profile);
 
 const port = process.env.PORT || 5000;
 
