@@ -7,7 +7,7 @@
     "client-install": "npm install --prefix client ",
     "install-all": "npm install && npm install --prefix client",
     "postinstall": "npm install --prefix client --save",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/petercr/dev-connector#readme",
   "engines": {
-    "node": "10.*"
+    "node": "11.*"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
