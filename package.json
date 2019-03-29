@@ -7,11 +7,11 @@
     "client-install": "npm install --prefix client ",
     "install-all": "npm install && npm install --prefix client",
     "postinstall": "npm install --prefix client --save",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "gcp-build": "npm install --prefix client && npm run build --prefix client"
+    "gcp-build": "npm install && cd client && npm install"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/petercr/dev-connector#readme",
   "engines": {
-    "node": "10.*"
+    "node": "11.*"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -40,11 +40,11 @@
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.1",
+    "nconf": "^0.10.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^10.10.0"
+    "validator": "^10.10.0",
+    "nodemon": "^1.18.10"
   },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
-  }
+  "devDependencies": {}
 }
