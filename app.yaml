@@ -1,4 +1,4 @@
-runtime: nodejs10
+runtime: nodejs
 env: flex
 env_variables:
   MONGO_URI: "mongodb+srv://peter:VSkSvhqeVL4dDhK@cluster0-darra.gcp.mongodb.net/test?retryWrites=true"
