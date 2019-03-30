@@ -11,7 +11,8 @@
     "server": "nodemon server.js",
     "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "gcp-build": "npm install && cd client && npm install"
+    "gcp-build": "npm install && cd client && npm install", 
+    "build": "npm install && cd client && npm install"
   },
   "repository": {
     "type": "git",
