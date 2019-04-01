@@ -11,7 +11,7 @@
     "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "gcp-build": "npm run build --prefix client",
-    "build": "cd client && npm run build"
+    "build": "npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
