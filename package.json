@@ -11,7 +11,7 @@
     "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "gcp-build": "npm run build --prefix client",
-    "build": "NPM_CONFIG_PRODUCTION=false npm run build --prefix client"
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/petercr/dev-connector/issues"
   },
-  "homepage": "https://github.com/petercr/dev-connector#readme",
+  "homepage": "https://rocky-bastion-76391.herokuapp.com/",
   "engines": {
     "node": "10.*"
   },
