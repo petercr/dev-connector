@@ -5,14 +5,13 @@
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client ",
-    "install-all": "npm install && npm install --prefix client",
-    "postinstall": "npm install --prefix client --save",
+    "install-all": "npm install --save && npm install --prefix client --save",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "gcp-build": "cd client && npm run build",
-    "build": "npm install && cd client && npm install"
+    "gcp-build": "npm run build --prefix client",
+    "build": "NPM_CONFIG_PRODUCTION=false npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -44,8 +43,9 @@
     "nconf": "^0.10.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^10.10.0",
-    "nodemon": "^1.18.10"
+    "validator": "^10.10.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
 }
