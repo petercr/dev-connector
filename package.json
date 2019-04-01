@@ -10,7 +10,7 @@
     "server": "nodemon server.js",
     "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "gcp-build": "npm run build --prefix client",
+    "gcp-build": "npm install --prefix client --save && npm run build --prefix client",
     "build": "npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
