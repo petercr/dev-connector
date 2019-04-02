@@ -264,7 +264,7 @@ router.delete(
 // @desc    Delete education from profile
 // @access  Private
 router.delete(
-  "/education/:exp_id",
+  "/education/:edu_id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Profile.findOne({ user: req.user.id })
