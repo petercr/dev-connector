@@ -34,10 +34,10 @@ class Navbar extends Component {
             className="nav-link"
           >
             <img
+              className="rounded-circle"
               src={user.avatar}
               alt={user.name}
               style={{ width: "25px", marginRight: "5px" }}
-              className="rounded-circle"
               title="You must have a Gravatar connected to your email to display an image"
             />{" "}
             Logout
