@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 
 // Post Model
-const Post = require("../../modules/Post");
+const Post = require("../../models/Post");
 
 // Profile Model
-const Profile = require("../../modules/Profile");
+const Profile = require("../../models/Profile");
 
 // Post Validation
 const validatePostInput = require("../../validation/post");
@@ -32,7 +32,6 @@ router.get("/", (req, res) => {
 // @access  Public
 router.get("/:id", (req, res) => {
   Post.findById(req.params.id)
-    .then(post => res.json(post))
     .then(post => {
       if (post) {
         res.json(post);
