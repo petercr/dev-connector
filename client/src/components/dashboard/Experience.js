@@ -32,16 +32,17 @@ class Experience extends Component {
         </td>
       </tr>
     ));
+
     return (
       <div>
         <h4 className="mb-4">Experience Credentials</h4>
         <table className="table">
           <thead>
             <tr>
-              <th>Company</th>
-              <th>Title</th>
-              <th>Years</th>
-              <th />
+              <th scope="col">Company</th>
+              <th scope="col">Title</th>
+              <th scope="col">Years</th>
+              <th scope="col" />
             </tr>
             {experience}
           </thead>
