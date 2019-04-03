@@ -10,7 +10,7 @@
     "server": "nodemon server.js",
     "client": "cd client && npm start ",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "gcp-build": "npm install --prefix client --save && npm run build --prefix client",
+    "gcp-build": "npm run build --prefix client",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
@@ -33,6 +33,7 @@
     "node": "10.*"
   },
   "dependencies": {
+    "@google-cloud/debug-agent": "^3.1.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
