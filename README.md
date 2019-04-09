@@ -11,7 +11,7 @@ With that being said, the app is not complete. So if something breaks, it breaks
 
 ### How to get it up and running
 
-First go ahead and clone this repository either by downloading the .ZIP file or by entering `git clone https://github.com/bradtraversy/devconnector.git` into your terminal.
+First go ahead and clone this repository either by downloading the .ZIP file or by entering `https://github.com/petercr/dev-connector.git` into your terminal.
 
 Next to install the dependancies and run this project requires [Node JS & NPM package manager](https://www.nodejs.org) version 10 or higher.
 
